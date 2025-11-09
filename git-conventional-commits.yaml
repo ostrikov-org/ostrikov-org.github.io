@@ -1,4 +1,6 @@
 ---
+# specifies conventional commits types for this very project
+# The types are also checked by pre-commit
 convention:
   commitTypes:
   - feat     # Commits, that add or remove a new feature to the API or UI
@@ -15,6 +17,7 @@ convention:
   - revert
   commitScopes: []
   releaseTagGlobPattern: '[0-9]*.[0-9]*.[0-9]*'
+# How to generate changelog from the conventional commits
 changelog:
   commitTypes:
   - feat
