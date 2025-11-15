@@ -1,0 +1,39 @@
+name: Deploy pages manually
+
+on:
+  workflow_dispatch:
+
+# https://github.com/actions/deploy-pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # clone the repo so that "src/" is present
+      - uses: actions/checkout@v5
+
+      # artifact is "github-pages" by default
+      - name: Upload "src" directory as an artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: src/
+
+  deploy-pages:
+    # Depends on build since we need the artifacts
+    needs:
+      - build
+    permissions:
+      id-token: write
+      pages: write
+    runs-on: ubuntu-latest
+
+    # environment is required for github pages deployment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # deploys to github pages the content from "github-pages" artifact
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
