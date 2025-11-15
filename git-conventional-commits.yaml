@@ -2,20 +2,29 @@
 # specifies conventional commits types for this very project
 # The types are also checked by pre-commit
 convention:
+  # commit types are as described in this regex:
+  # https://gist.github.com/marcojahn/482410b728c31b221b70ea6d2c433f0c
+  #   ^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test){1}(\([\w\-\.]+\))?(!)?: ([\w ])+([\s\S]*)
   commitTypes:
-  - feat     # Commits, that add or remove a new feature to the API or UI
-  - fix      # Commits, that fix a API or UI bug of a preceded feat commit
-  - refactor # Commits, that rewrite/restructure your code, however do not change any API or UI behaviour
-  - perf     # Commits are special `refactor` commits, that improve performance
-  - style
-  - test
-  - build    # Commits, that affect build components like build tool, dependencies, project version, ...
-  - ops      # Commits, that affect operational components like infrastructure, deployment, backup, recovery, ...
-  - docs
+  # Commits, that affect build components like build tool, dependencies, project version, ...
+  - build
   - chore
   - ci
-  - merge
+  - docs
+  # Commits, that add or remove a new feature to the API or UI
+  - feat
+  # Commits, that fix a API or UI bug of a preceded feat commit
+  - fix
+  # Commits are special `refactor` commits, that improve performance
+  - perf
+  # Commits, that rewrite/restructure your code, however do not change any API or UI behaviour
+  - refactor
+  # Commits, that revert changes, made in other commits, you can put `Refs: ...` footer to indicate which refs (commits, PRs) are reverted
   - revert
+  # Commits for refactoring style of the repository
+  - style
+  # Unit tests, etc
+  - test
   commitScopes: []
   releaseTagGlobPattern: '[0-9]*.[0-9]*.[0-9]*'
 # How to generate changelog from the conventional commits
