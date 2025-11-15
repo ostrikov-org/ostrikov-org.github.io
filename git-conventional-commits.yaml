@@ -33,14 +33,12 @@ changelog:
   - feat
   - fix
   - perf
-  - merge
-  includeInvalidCommits: true
+  includeInvalidCommits: false
   commitIgnoreRegexPattern: "^WIP "
   headlines:
     feat: Features
     fix: Bug Fixes
     perf: Performance Improvements
-    merge: Merges
     breakingChange: BREAKING CHANGES
 
   ## GitHub
