@@ -2,12 +2,16 @@
 title: Serhii Ostrikov's Website
 aliases:
   - home
+tags:
+  - info
 ---
-# Hello, world!
+# ☀️ Hello, world!
+Hi!
 
-> [!info]
-> This page is under development, stay tuned!
+This is my website where I publish all sorts of stuff, mostly about **computer science** - **programming**, **systems administration**, **DevOps**, etc.
 
-[[about]]
-# Q&A
-[[how is this website built]]
+Have fun!
+# 🔗 Links
+- [[contacts|Contacts]]
+# ❓ Q&A
+- [[how is this website built|How is this website built?]]
