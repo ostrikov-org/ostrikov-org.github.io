@@ -1,5 +1,5 @@
 ---
-title: Gradual on-prem migration to AWS
+title: On-prem migration to AWS
 tags:
   - aws
   - serverless

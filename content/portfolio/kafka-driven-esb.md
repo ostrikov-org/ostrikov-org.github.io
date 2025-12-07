@@ -6,10 +6,10 @@ tags:
   - portfolio
   - "#gitlab"
   - ecs
-title: Kafka Based Event-Driven Enterprise Service Bus (ESB)
+title: Kafka Based ESB
 ---
 # Client Story
-In this project the client required an ESB capable of handling **thousands of real-time messages per second** across **fully isolated environments**.
+In this project the client required an **Event-Driven** ESB (Enterprise Service Bus) capable of handling **thousands of real-time messages per second** across **fully isolated environments**.
 
 Because **the data included sensitive** and potentially **PII-level information**, they needed *strict*, *granular access controls* and *end-to-end security*, including *encryption at-rest and in-transit*.
 

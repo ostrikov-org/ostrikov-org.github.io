@@ -7,9 +7,11 @@ tags:
   - portfolio
   - ecs
   - eks
-title: Social Media Platform (Facebook-like)
+title: Social Media Platform
 ---
 # Client story
+The client was building a social media platform, like Facebook
+
 The client needed a **secure**, **multi-environment social platform** managed across regions with **granular access**, **clear documentation**, **DR readiness**, and **cost visibility**.
 
 They required a **fully automated**, **scalable** application platform with **standardized environments**, **centralized observability**, and **end-to-end CI/CD for backend, serverless, and mobile apps** to support rapid releases.
